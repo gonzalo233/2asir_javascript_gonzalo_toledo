@@ -1,0 +1,34 @@
+<?php
+
+
+class clase_saludo {
+    var $dato;
+	
+	function  clase_saludo ($parametro){  
+	  echo $parametro;
+	}
+	
+	function Saludar (){
+	  echo "Bienvenido a la POO"."<br>"; 
+	}
+	
+	function IntroducirDato ($mensaje){ 
+	  $this->dato = $mensaje;
+	}
+	
+	function VisualizarDato (){ 
+	   echo $this->dato;
+	}
+}
+
+$primerprograma = new clase_saludo("mi primer programa en POO"."<br>");
+
+$primerprograma->Saludar();
+
+$primerprograma->IntroducirDato("este es mi mensaje");
+
+$primerprograma->VisualizarDato();
+
+
+
+?>

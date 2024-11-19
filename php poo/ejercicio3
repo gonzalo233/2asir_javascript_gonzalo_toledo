@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>2ASIR</title>
+</head>
+<body>
+<?php
+class clase_ciclo_superior {
+  private $nombre;
+  public function IntroducirNombre($nom)
+  {
+    $this->nombre=$nom;
+  }
+  public function VisualizarNombre()
+  {
+    echo $this->nombre;
+    echo "<br>";
+  } 
+
+}
+
+class clase_2asir  extends clase_ciclo_superior {
+  private $titula;
+  
+  public function IntroducirTitula($titula)
+  {
+      $this->titula=$titula;
+  }
+  public function VisualizarTitula()
+  {
+    if ($this->titula == "SI"){
+             echo "Este alumno/a titula";
+    } else {
+          echo "Este alumno/a NO titula";
+    }
+    echo "<br>";
+  } 
+    
+  
+}
+class clase_1asir extends clase_ciclo_superior {
+  private $notaEval1;
+  private $notaEval2;
+  private $notaEval3;
+   public function IntroducirNotas($n1,$n2,$n3)
+    {
+      $this->notaEval1=$n1;
+      $this->notaEval2=$n2;
+      $this->notaEval3=$n3;
+    } 
+    public function VisualizarNotas()
+    {
+      echo "Notas: ".$this->notaEval1."  ".$this->notaEval2."  ".$this->notaEval3;
+      echo "<br><br><br>";
+    } 
+  
+}
+
+$alumno1=new clase_1asir();
+$alumno1->IntroducirNombre('Emiliano');
+$alumno1->IntroducirNotas(4,7,8);
+
+$alumno1->VisualizarNombre();
+$alumno1->VisualizarNotas();
+
+$alumno2=new clase_2asir();
+$alumno2->IntroducirNombre('Patricia');
+$alumno2->IntroducirTitula("SI");
+
+$alumno2->VisualizarNombre();
+$alumno2->VisualizarTitula();
+?>
+</body>
+</html>
